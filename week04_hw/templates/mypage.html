@@ -1,15 +1,17 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mypage.css" />
+    <link rel="stylesheet" href="{% static 'css/mypage.css' %}" />
     <title>자기소개</title>
 </head>
 <body>
     <section id="about">
         <header>
-            <p><img src="./images/icon.svg" alt="logo"/>숙명여대 멋쟁이사자처럼 14th</p>
+            <p><img src="{% static 'images/icon.svg' %}" alt="logo"/>숙명여대 멋쟁이사자처럼 14th</p>
         </header>
 
         <div class="pTitle">
@@ -25,7 +27,7 @@
                 </h4>
             </div>
 
-            <img src="./images/myprofile.png" alt="profile">
+            <img src="{% static 'images/myprofile.png' %}" alt="profile">
 
             <div class="right">
                 <h4>
@@ -55,11 +57,11 @@
         <h1>MY FAVORITES...</h1>
         <div class="fav">
             <div class="slider">
-                <img src="./images/cafe1.png" class="active" alt="favorite 1">
-                <img src="./images/cafe2.png" alt="favorite 2">
-                <img src="./images/food.png" alt="favorite 3">
-                <img src="./images/musical1.png" alt="favorite 4">
-                <img src="./images/musical2.png" alt="favorite 5">
+                <img src="{% static 'images/cafe1.png' %}" class="active" alt="favorite 1">
+                <img src="{% static 'images/cafe2.png' %}" alt="favorite 2">
+                <img src="{% static 'images/food.png' %}" alt="favorite 3">
+                <img src="{% static 'images/musical1.png' %}" alt="favorite 4">
+                <img src="{% static 'images/musical2.png' %}" alt="favorite 5">
             </div>
             <div class="introduce">
                 <br>
@@ -76,14 +78,14 @@
 
     <footer>
         <div class="footer-item">
-            <img src="./images/instagram.svg" alt="instagram">
+            <img src="{% static 'images/instagram.svg' %}" alt="instagram">
             <p>dlavenii</p>
         </div>
         <div class="footer-item">
-            <img id = "email" src="./images/email.svg" alt="email">
+            <img id = "email" src="{% static 'images/email.svg' %}" alt="email">
             <p>24dd1301@sookmyung.ac.kr</p>
         </div>
     </footer>
-    <script src="mypage.js"></script>
+    <script src="{% static 'js/mypage.js' %}"></script>
 </body>
 </html>
