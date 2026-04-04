@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mypage.css" />
+    <title>자기소개</title>
+</head>
+<body>
+    <section id="about">
+        <header>
+            <p><img src="./images/icon.svg" alt="logo"/>숙명여대 멋쟁이사자처럼 14th</p>
+        </header>
+
+        <div class="pTitle">
+            <h1>ABOUT ME</h1>
+        </div>
+
+        <main>
+            <div class="left">
+                <h4>
+                    이름&nbsp;&nbsp;&nbsp;정다인<br>
+                    학번&nbsp;&nbsp;&nbsp;24학번<br>
+                    생년월일&nbsp;2005.11.10
+                </h4>
+            </div>
+
+            <img src="./images/myprofile.png" alt="profile">
+
+            <div class="right">
+                <h4>
+                    학과&nbsp;컴퓨터과학전공<br>
+                    분야&nbsp;&nbsp;프론트엔드<br>
+                    닉네임&nbsp;&nbsp;아기사자
+                </h4>
+            </div>
+        </main>
+        <div class="scroll">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="150" viewBox="0 0 16 150" fill="none">
+                <defs>
+                    <linearGradient id="scrollGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                        <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+                    </linearGradient>
+                </defs>
+                <path
+                    d="M9.50001 1.5L9.50001 1.84777e-07L6.50001 -1.84776e-07L6.50001 1.5L8.00001 1.5L9.50001 1.5ZM7.99999 133.5C3.58172 133.5 -5.92647e-06 137.082 -6.11959e-06 141.5C-6.31272e-06 145.918 3.58172 149.5 7.99999 149.5C12.4183 149.5 16 145.918 16 141.5C16 137.082 12.4183 133.5 7.99999 133.5ZM8.00001 1.5L6.50001 1.5L6.49999 141.5L7.99999 141.5L9.49999 141.5L9.50001 1.5L8.00001 1.5Z"
+                    fill="url(#scrollGrad)"
+                />
+            </svg>
+        </div>
+    </section>
+
+    <div class="favorites" id="favorites">
+        <h1>MY FAVORITES...</h1>
+        <div class="fav">
+            <div class="slider">
+                <img src="./images/cafe1.png" class="active" alt="favorite 1">
+                <img src="./images/cafe2.png" alt="favorite 2">
+                <img src="./images/food.png" alt="favorite 3">
+                <img src="./images/musical1.png" alt="favorite 4">
+                <img src="./images/musical2.png" alt="favorite 5">
+            </div>
+            <div class="introduce">
+                <br>
+                제 취미는 영화보기입니다<br>
+                자주 많이 보진 않지만, 옛날 영화들 찾아보고<br>
+                해석 영상이나 글 보는거 좋아해요<br>
+                예전에는 뮤지컬도 종종 봤는데,<br>
+                요즘은 티켓값때문에 못 보고 있어요<br>
+                여행 다니면서 사진 찍는 것도 좋아하고<br>
+                예쁜 카페에서 디저트 먹는 것도 좋아합니다!
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-item">
+            <img src="./images/instagram.svg" alt="instagram">
+            <p>dlavenii</p>
+        </div>
+        <div class="footer-item">
+            <img id = "email" src="./images/email.svg" alt="email">
+            <p>24dd1301@sookmyung.ac.kr</p>
+        </div>
+    </footer>
+    <script src="mypage.js"></script>
+</body>
+</html>
