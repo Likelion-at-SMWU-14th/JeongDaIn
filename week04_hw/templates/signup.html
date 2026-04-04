@@ -15,7 +15,7 @@
                 <img src="{% static 'images/icon.svg' %}">
                 <h2>회원가입하기</h2>
             </div>
-            <a href="login.html" class="out-btn">
+            <a href="{% url 'login' %}" class="out-btn">
                 <img src="{% static 'images/out.svg' %}">
             </a>
         </header>
@@ -31,7 +31,7 @@
             </section>
             <section class="signup_section">
                 <span>비밀번호</span>
-                <input id="password1" name="password" type="password" placeholder="비밀번호를 입력해 주세요." required autocomplete="off">
+                <input id="password1" name="password1" type="password" placeholder="비밀번호를 입력해 주세요." required autocomplete="off">
             </section>
             <section class="signup_section">
                 <span>비밀번호 확인</span>
@@ -40,6 +40,6 @@
             <button class="signup_btn" type="submit">회원가입하기</button>
         </form>
     </div>
-    <script src="{% static 'signup.js' %}"></script>
+    <script src="{% static 'js/signup.js' %}"></script>
 </body>
 </html>
