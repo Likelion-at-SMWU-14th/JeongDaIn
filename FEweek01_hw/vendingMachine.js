@@ -8,3 +8,9 @@ const bev = [{ name: "아메리카노", price: 3000},
     { name: "카푸치노", price: 4500},
     { name: "녹차라떼", price: 6000},
     { name: "딸기라떼", price: 5500},];
+
+// 2. 랜덤 선택 기능
+// Math 메서드를 사용해서 무작위로 음료 1개 선택
+function getRandom(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
