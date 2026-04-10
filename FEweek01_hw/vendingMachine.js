@@ -18,14 +18,18 @@ function getRandom(arr) {
 // 3. 출력 조건
 // 구매 가능하다면 음료 출력, 지갑에서 price만큼 빼기
 // 구매 불가능하다면 잔고 부족 메세지 출력
-function buyBev(n) {
+function buyDrink(n) {
     if (bev[n].price <= pay) {
         pay -= bev[n].price;
-        console.log(`${bev[n].name} 음료가 나왔어요! (가격:${bev[n].price}원)`);
+        return `${bev[n].name} 음료가 나왔어요! (가격:${bev[n].price}원)\n지갑에 남은 돈: ${pay}원`;
     }
-    else {console.log(`돈이 부족해요! 음료를 살 수 없어요!`);
-
-    }
+    else return `돈이 부족해요! 음료를 살 수 없어요!`;
 }
 
-buyBev(getRandom(bev));
+// 4. 반복 조건
+// 구매 성공 여부와 관계 없이 3번 시도 가능 
+let cnt = 0;
+while (cnt < 3) {
+    console.log(buyDrink(getRandom(bev)));
+    cnt++;
+}
