@@ -4,9 +4,9 @@ const wishList = document.getElementById("wish-list");
 
 // 위시리스트 추가 함수
 function addWish(event){
-    event.preventDefault();  // 폼 제출 방지
+    event.preventDefault();  // 폼 제출 방지    
 
-    const wishText = wishInput.ariaValueMax.trim();
+    const wishText = wishInput.value.trim();
 
     if (wishText !== ""){
         // 새 아이템 생성
@@ -31,3 +31,17 @@ function addWish(event){
         wishInput.value = ""
     }
 }
+
+function handleWishClick(event) {
+    const target = event.target;
+
+    // 삭제 버튼 클릭
+    if (target.classList.contains("delete-btn")) {
+        target.parentElement.remove();
+    }
+}
+
+
+// 이벤트 등록
+wishForm.addEventListener("submit",addWish);  
+wishList.addEventListener("click", handleWishClick);
