@@ -28,6 +28,7 @@
             display: flex;
             flex-direction: column;
         }
+
         header img{
             width: 40px;
             height: 40px;
@@ -40,6 +41,7 @@
         #myId {
             font-weight: bold;
         }
+
         main {
             width: 100%;
         }
@@ -49,6 +51,7 @@
             display: block;
             object-fit: cover;
         }
+
         footer {
             width: 100%;
             padding: 10px;
@@ -62,10 +65,14 @@
             width: 40px;
             height: 40px;
         }
-        footer .inter > #bm{
+        footer .inter #bm{
             width: 35px;
             margin-left: 430px;
         }
+        footer .text #subText{
+            display: none;
+        }
+
     </style>
 </head>
 <body>
@@ -85,20 +92,42 @@
     </main>
     <footer>
         <div class="inter">
-            <img src="./image/heart-off.png" alt="좋아요">            
+            <img id="heart" src="./image/heart-off.png" alt="좋아요">
             <img src="./image/comment.png" alt="댓글">
             <img src="./image/regram.png" alt="리그램">
             <img src="./image/share.png" alt="공유">
             <img id="bm" src="./image/bookmark-off.png" alt="북마크">
         </div>
-        <p>좋아요 42개</p>
+        <p id="likeCount">좋아요 42개</p>
         <div class="text">
             <p id="myId">dlavenii</p>
             <p id="mainText">스위스를꼭다시가야하는모임...</p>
-            <p>방문한 곳은 인터라켄 융프라우!!</p>
+            <p id="more-btn">더 보기</p>
+            <p id="subText">방문한 곳은 인터라켄 융프라우!!</p>
+            <p id="hide-btn">접기</p>
             <p id="date">2월 1일</p>
         </div> 
     </footer>
+    <script>
+        const heart = document.getElementById('heart');
+        let isLiked = false;
+        let likeNum = 42;
+
+        heart.addEventListener('click', function() {
+            if (isLiked) {
+                heart.src = './image/heart-off.png'
+                likeNum--;
+                likeCount.innerHTML = `좋아요 ${likeNum}개`
+                isLiked = false;
+            } else {
+                heart.src = './image/heart-on.png'
+                likeNum++;
+                likeCount.innerHTML = `좋아요 ${likeNum}개`
+                isLiked = true;
+            }
+        });
+
+    </script>
     <script src="insta.js"></script>
 </body>
 </html>
