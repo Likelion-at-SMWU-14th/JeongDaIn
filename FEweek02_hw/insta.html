@@ -72,7 +72,15 @@
         footer .text #subText{
             display: none;
         }
-
+        #more-btn {
+            cursor: pointer;
+            color: #666;
+        }
+        #hide-btn {
+            cursor: pointer;
+            color: #666;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -138,6 +146,22 @@
                 bookmark.src = './image/bookmark-on.png'
                 isbookmarked = true;
             }
+        });
+
+        const moreBtn = document.getElementById('more-btn');
+        const hideBtn = document.getElementById('hide-btn');
+        const subText = document.getElementById('subText');
+
+        moreBtn.addEventListener('click', function() {
+            subText.style.display = 'block';
+            moreBtn.style.display = 'none';
+            hideBtn.style.display = 'inline';
+        });
+
+        hideBtn.addEventListener('click', function() {
+            subText.style.display = 'none';
+            moreBtn.style.display = 'inline';
+            hideBtn.style.display = 'none';
         });
 
     </script>
