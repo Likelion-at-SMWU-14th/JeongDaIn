@@ -17,20 +17,31 @@
             height: 1000px;
         }
         header {
-            width: 100%;
+            width: 95%;
+            padding: 20px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
         }
         header .name {
+            margin-left: -420px;
             display: flex;
+            flex-direction: column;
         }
         header img{
             width: 40px;
             height: 40px;
             border-radius: 50%;
+            border-style: solid;
+        }
+        #set{
+            font-weight: bold;
         }
         #myId {
             font-weight: bold;
+        }
+        main {
+            width: 100%;
         }
         #feedImg {
             width: 100%;
@@ -38,9 +49,22 @@
             display: block;
             object-fit: cover;
         }
-        main .inter {
+        footer {
+            width: 100%;
+            padding: 10px;
+        }
+        footer .inter {
             display: flex;
-            gap: 50px;
+            gap: 40px;
+            margin-top: 15px;
+        }
+        footer .inter > img{
+            width: 40px;
+            height: 40px;
+        }
+        footer .inter > #bm{
+            width: 35px;
+            margin-left: 430px;
         }
     </style>
 </head>
@@ -53,23 +77,28 @@
                 <p id="location">스위스</p>
                 <p id="bgm">↗ Ariana Grande · twilight zone</p>
             </div>
-            <p id="set">···</p>
         </div>
+        <p id="set">· · ·</p>
     </header>
     <main>
         <img id="feedImg" src="./image/feed.png" alt="내 피드 사진">
+    </main>
+    <footer>
         <div class="inter">
-            <p><img src="./image/heart-off.png" alt="좋아요">좋아요 42개</p>
-            <img src="./image/sub.png" alt="댓글 등">
+            <img src="./image/heart-off.png" alt="좋아요">            
+            <img src="./image/comment.png" alt="댓글">
+            <img src="./image/regram.png" alt="리그램">
+            <img src="./image/share.png" alt="공유">
             <img id="bm" src="./image/bookmark-off.png" alt="북마크">
         </div>
-        <div class="comment">
+        <p>좋아요 42개</p>
+        <div class="text">
             <p id="myId">dlavenii</p>
             <p id="mainText">스위스를꼭다시가야하는모임...</p>
             <p>방문한 곳은 인터라켄 융프라우!!</p>
             <p id="date">2월 1일</p>
-        </div>
-    </main>
+        </div> 
+    </footer>
     <script src="insta.js"></script>
 </body>
 </html>
