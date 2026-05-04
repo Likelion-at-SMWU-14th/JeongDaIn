@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    margin: 0 auto;
+}
+header {
+    width: 95%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+header .name {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.name-slide {
+    position: relative;
+    width: 100%;
+    height: 20px;
+}
+#location {
+    position: absolute; /* 겹치게 배치 */
+    opacity: 1;  /* 처음에는 보이게 */
+    transform: translateY(0);
+    top: 0;
+    font-size: 14px;
+    transition: all 0.6s ease-in-out;
+}
+
+#bgm {
+    position: absolute;
+    opacity: 0;  /* 처음에는 숨기기 */
+    transform: translateY(20px);
+    top: 0;
+    font-size: 14px;
+    transition: all 0.6s ease-in-out;
+}
+header img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #a4a4a4;
+}
+#set{
+    font-weight: bold;
+}
+#myId {
+    font-weight: bold;
+}
+
+main {
+    width: 100%;
+}
+#feedImg {
+    width: 99%;
+    height: 830px;
+    display: block;
+    object-fit: cover;
+}
+
+footer {
+    width: 100%;
+    padding: 10px;
+}
+footer .inter {
+    display: flex;
+    gap: 40px;
+    margin-top: 10px;
+}
+footer .inter > img{
+    width: 35px;
+    height: 30px;
+}
+footer .inter #bm{
+    width: 30px;
+    margin-left: 460px;
+}
+#likeCount {
+    margin-top: 10px;
+    font-weight: 500;
+}
+footer .text {
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+}
+footer .text #subText{
+    display: none;
+}
+#more-btn {
+    cursor: pointer;
+    color: #666;
+}
+#hide-btn {
+    cursor: pointer;
+    color: #666;
+    display: none;
+}
+#date {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+}
